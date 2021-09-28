@@ -1,0 +1,120 @@
+
+<html>
+    <head>\
+        <meta charset="utf-8"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/style_register.css">
+        <title>Register</title>
+
+        <script type="text/javascript">
+            function getInfo(){
+                var name = document.getElementById("name").value;
+                var phone = document.getElementById("phone").value;
+                var reason = document.getElementById("reason").value;
+
+                if(name==""||phone==""||reason==""){
+                    alert("Đến việc nhập thông tin mà bạn không làm được thì đừng hỏi tại sao mình bị cắm sừng. Mời bạn nhập lại thông tin đầy đủ và chính xác!")
+                }
+
+                if(name&&phone&&reason){
+                    alert("Thông tin đã được gửi đi!");
+
+                    info ="Thật đau khổ khi biết rằng mình bị cắm sừng. Nhưng không sao,&nbsp" +name +"! Chúng tôi sẽ giúp đỡ bạn vượt qua nỗi đau này.<br>";
+                    info +="&nbspHuy_Hen_Hao sẽ liên hệ với bạn qua số điện thoại:&nbsp" + phone+", để giúp bạn giải quyết vấn đề&nbsp"+reason+". Bạn chú ý nhé!";
+                  
+                    document.getElementById("KetQua").innerHTML = info;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="./image/logo.JPG" />
+                </div>
+                <div class="contact-info">
+                    <ul>
+                        <li>
+                            <div class="contact-icon">
+                                <span class="material-icons md-20" style="color:#1b9ce3;">send</span>
+                            </div>
+                            <div class="contact-text">
+                                <label for="">Email</label>
+                                <span>huyloveuyuy@gmail.com</span>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="contact-icon">
+                                <span class="material-icons md-20" style="color:#1b9ce3;">call</span>
+                            </div>
+                            <div class="contact-text">
+                                <label for="">Call</label>
+                                <span>0395.017.708</span>
+                            </div>
+                        </li>
+                       
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div id="nav">
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="./service.html">Service</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    
+                </ul>
+            </div>
+            <div class="form-search">
+                <input type="text" class="keyword" placeholder="Search"/>
+                <button type="submit" class="btn-seach">
+                    <span class="material-icons md-20" style="color:#999;">search</span>
+                </button>
+            </div>
+        </div>
+    
+        <form action="" method="POST" onsubmit="return validate()">
+
+            <div class="register">
+                <h1>Bạn cần giúp đỡ</h1>
+                <p>Vui lòng nhập thông tin để nhận được sự giúp đỡ kịp thời từ những chuyên gia đầy sừng và kinh nghiệm từ Huy_Hen_Hao!</p>
+                <hr>
+                <label for="username"><b>Bạn Tên Là Gì </b></label>
+                <input type="text" placeholder="Họ và tên" name="name" id="name">
+                <label for="password"><b>Số Điện Thoại Của Bạn</b></label>
+                <input type="text" placeholder="Số Điện Thoại" name="phone" id="phone">
+                <label for="password-repeat"><b>Bạn Gặp Vấn Đề Gì</b></label>
+                <input type="text" placeholder="Vấn Đề Là Gì" name="reason" id="reason">
+                <hr>
+                <p>Chúng tôi sẽ liên hệ đến bạn sớm nhất có thể!</p>
+                <button type="submit" class="submit" onclick="getInfo();return false;" >Gửi thông tin</button>
+         </div>
+         
+         <div id="thongbao">
+            <h2>Hãy tin tưởng chúng tôi!</h2>
+            <p><i>Sừng không tự nhiên sinh ra, sừng không tự nhiên mất đi. Mà chỉ là chuyển từ đầu người này sang đầu người khác.</i></p>
+
+            <h1>Cảm ơn bạn đã gửi thông tin.</h1>
+
+
+            <div id="KetQua"></div>
+         </div>
+         
+
+            
+        </form>
+
+        <div id="footer"><p>©2021 Bản Quyền Thuộc Về Huy_Hen_Hao Inc.</p></div>
+    
+    </body>
+    </html>
